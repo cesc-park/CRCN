@@ -1,0 +1,6 @@
+*.DS_Store
+*.pyc
+temp/*
+build/*
+keras/datasets/data/*
+keras/datasets/temp/*

@@ -1,0 +1,13 @@
+Too make tree json, you have to run stanford core nlp tree parser.
+
+We provide example code(StanfordCoreNlpTreeAdder.java) for it.
+
+You have to run StanfordCoreNlpTreeAdder.java with json-simple-1.1.1.jar by importing it.
+
+Because, StanfordCoreNLP is too slow and sometimes it gives exception, we provide
+
+spliter of our data and merger too.
+
+If you met exception, you should retrying, so if you set split num (in spliter_for_parser.py) as large number you will waste your time.
+
+We don't understand why exception happens randomly. If you know please let us know it will be very helpful.

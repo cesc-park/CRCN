@@ -1,0 +1,44 @@
+example.json
+
+keys
+['images', 'dataset']
+
+'dataset':'nyc'
+,'images':[
+	{
+	'docpath': '/home/cspark/nips/crawl/blogcrawler/url/full_html/blogspot/http_clnslsh_limeyg_dot_blogspot_dot_com_slh_2011_slh_03_slh_being-almost-normal-in-nyc_dot_html', 
+	'imgid': 0, '
+	sentences': [
+			{'tokens': ['little', 'dark', 'good', 'photos', 'gives', 'sense', 'selection'], 
+			'raw': 'again it was a little too dark for good photos but this gives a sense of the selection', 
+			'imgid': 0, 
+			'sentid': 0}
+			], 
+	'filename': '/data/cspark/nyc/img/blogspot/http_clnslsh_limeyg_dot_blogspot_dot_com_slh_2011_slh_03_slh_being-almost-normal-in-nyc_dot_html/http_clnslsh_farm6_dot_static_dot_flickr_dot_com_slh_5211_slh_5486414295_cb5c2a5f76.jpg'
+	}
+]
+
+
+
+example_tree.json
+
+
+['images', 'dataset']
+
+'dataset':'nyc'
+,'images':[
+	{
+	'docpath': '/home/cspark/nips/crawl/blogcrawler/url/full_html/blogspot/http_clnslsh_limeyg_dot_blogspot_dot_com_slh_2011_slh_03_slh_being-almost-normal-in-nyc_dot_html', 
+	'imgid': 0, '
+	sentences': [
+			{
+			'tokens': ['little', 'dark', 'good', 'photos', 'gives', 'sense', 'selection'], 
+			'raw': 'again it was a little too dark for good photos but this gives a sense of the selection', 
+			'imgid': 0, 
+			'sentid': 0,
+			'tree': '(ROOT (S (NP (RB again) (PRP it)) (VP (VBD was) (ADJP (NP (DT a) (JJ little)) (RB too) (JJ dark)) (PP (IN for) (NP (JJ good) (NNS photos))) (SBAR (CC but) (S (NP (DT this)) (VP (VBZ gives) (NP (NP (DT a) (NN sense)) (PP (IN of) (NP (DT the) (NN selection))))))))))'
+			}
+			], 
+	'filename': '/data/cspark/nyc/img/blogspot/http_clnslsh_limeyg_dot_blogspot_dot_com_slh_2011_slh_03_slh_being-almost-normal-in-nyc_dot_html/http_clnslsh_farm6_dot_static_dot_flickr_dot_com_slh_5211_slh_5486414295_cb5c2a5f76.jpg'
+	}
+]
