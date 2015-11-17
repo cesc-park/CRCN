@@ -87,9 +87,8 @@ git clone https://github.com/cesc-park/CRCN.git crcn
 	make TestGrid
 	cd ..
 	```
-3.  Install python modules
+3.  Install python modules of all dependencies.
 
-	Install all dependencies.
 	```
 	for req in $(cat python_requirements.txt); do pip install $req; done
 	```
@@ -97,14 +96,13 @@ git clone https://github.com/cesc-park/CRCN.git crcn
 
 ##Applying to New Dataset
 
-1. Prepare dataset
-
-	Check out data format.
+1. Prepare dataset.
+	Check out the data format.
 	```
 	less json_data_format.txt
 	```
 
-2. Create parsed trees
+2. Create parsed trees. 
 	We use the `StanfordCoreNLP` tool written in java to extract parsed trees. 
 	```
 	cd tree
