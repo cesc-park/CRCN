@@ -34,7 +34,7 @@ year      = 2015
 
 git clone https://github.com/cesc-park/CRCN.git crcn
 
-##Pre-requisite
+##Prerequisites
 
 1. Install Stanford NLP
 
@@ -95,7 +95,7 @@ git clone https://github.com/cesc-park/CRCN.git crcn
 	```
 
 
-##Make New Dataset
+##Applying to New Dataset
 
 1. Prepare dataset
 
