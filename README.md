@@ -13,7 +13,7 @@ This project hosts the code for our NIPS 2015 paper.
 The CRCN stands for *Coherent Recurrent Convolutional Networks*.
 It integrates (i) convolutional networks for image description, (ii) bidirectional recurrent networks for the language model, and (iii) local coherence model for a smooth flow of multiple sentences.
 
-The main objective of our neural network model is, given a photo stream, to generate (retrieve) a coherent sequence of natural sentences. For example, if you visit New York City and takes lots of pictures, it can write a travelogue for your photo album. While almost all previous studies have dealt with the relation between a single image and a single natural sentence, our work extends both input and output dimension to a sequence of images and a sequence of sentences. 
+The main objective of our model is, given a photo stream, to generate (retrieve) a coherent sequence of natural sentences. For example, if you visit New York City and takes lots of pictures, it can write a travelogue for your photo album. While almost all previous studies have dealt with the relation between a single image and a single natural sentence, our work extends both input and output dimension to a sequence of images and a sequence of sentences. 
 
 
 ##Reference
