@@ -29,7 +29,7 @@ git clone https://github.com/cesc-park/CRCN.git crcn
 
 1. stanford NLP
 
-	Download stanford-parser.jar, stanford-parser-3.5.2-models.jar, englishPCFG.caseless.ser.gz
+	Download stanford-parser.jar, stanford-parser-3.5.2-models.jar and englishPCFG.caseless.ser.gz
 	```
 	wget http://nlp.stanford.edu/software/stanford-parser-full-2015-04-20.zip
 	wget http://nlp.stanford.edu/software/stanford-corenlp-full-2015-04-20.zip
@@ -41,7 +41,8 @@ git clone https://github.com/cesc-park/CRCN.git crcn
 	jar xvf stanford-parser-3.5.2-models.jar
 	```
 2. Brown courpus
-	We need browncourpus package to extract entity feature.
+
+	We need "browncourpus" package to extract entity feature.
 	```
 	wget https://bitbucket.org/melsner/browncoherence/get/d46d5cd3fc57.zip -O browncoherence.zip
 	unzip browncoherence.zip
@@ -52,22 +53,24 @@ git clone https://github.com/cesc-park/CRCN.git crcn
 	vim Makefile
 	```
 
-	change 
+	We have to change some lines in Makefile.
+	Change from up to bottom.
+	
 	```
 	WORDNET = 1
 	WORDNET = 0
 	```
-	change
 	
 	```
 	CFLAGS = $(WARNINGS) -Iinclude $(WNINCLUDE) $(TAO_PETSC_INCLUDE) $(GSLINCLUDE)
 	CFLAGS = $(WARNINGS) -Iinclude $(WNINCLUDE) $(TAO_PETSC_INCLUDE) $(GSLINCLUDE) -fpermissive 
 	```
-	change 
+	
 	```
 	WNLIBS = -L$(WNDIR)/lib -lWN
 	WNLIBS = -L$(WNDIR)/lib -lwordnet
 	```
+	
 	Then build TestGrid.
 	```
 	make TestGrid
