@@ -50,10 +50,12 @@ git clone https://github.com/cesc-park/CRCN.git crcn
 	cd browncoherence
 	mkdir lib64
 	mkdir bin64
-	vim Makefile
 	```
 
 	We have to change some lines in Makefile.
+	```
+	vim Makefile
+	```
 	Change from up to bottom.
 	
 	```
