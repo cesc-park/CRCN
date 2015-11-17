@@ -149,6 +149,9 @@ Generating output is easy. The program will load training and test datasets, the
 python generate_output.py
 ```
 
+##Acknowledge
+
+We use keras package (We changed it to make our model). Thanks for keras developers.
 
 
 ## Authors
