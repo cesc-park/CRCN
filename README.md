@@ -21,7 +21,7 @@ If you use this code as part of any published research, please acknowledge the f
 
 #Running Code
 
-git clone https://chunseong@bitbucket.org/chunseong/test-crcn.git crcn
+git clone https://github.com/cesc-park/CRCN.git crcn
 
 ##Pre-requisite
 
@@ -83,8 +83,10 @@ git clone https://chunseong@bitbucket.org/chunseong/test-crcn.git crcn
 
 1. Prepare Dataset
 
-	Check out dataformat from json_data_format.txt
-
+	Check out data format.
+	```
+	less json_data_format.txt
+	```
 
 2. Get Parsed Tree
 	We use StanfordCoreNLP tools implemented with java to extract parsedtree. 
@@ -141,7 +143,7 @@ mkdir model
 
 ##Generate Output
 
-Generating output is easy. The program will load training and test datasets, then automatically generate output.
+Generating output is easy. The program will load training and test datasets, then automatically generate outputs.
 
 ```
 python generate_output.py
