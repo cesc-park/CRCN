@@ -11,17 +11,14 @@ This project hosts the code for our NIPS 2015 paper.
 
 If you use this code as part of any published research, please acknowledge the following paper.
 
-> @inproceedings{Cesc:2015:NIPS,
-
-> author    = {Cesc Chunseong Park and Gunhee Kim},
-
-> title     = "{Expressing an Image Stream with a Sequence of Natural Sentences}",
-
-> booktitle = {NIPS},
-
-> year      = 2015
-
-> }
+```
+@inproceedings{Cesc:2015:NIPS,
+author    = {Cesc Chunseong Park and Gunhee Kim},
+title     = "{Expressing an Image Stream with a Sequence of Natural Sentences}",
+booktitle = {NIPS},
+year      = 2015
+}
+```
 
 
 #Running Code
