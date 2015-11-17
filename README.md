@@ -5,7 +5,7 @@
 ![alt tag](https://raw.githubusercontent.com/cesc-park/CRCN/master/stream2text_nips.jpg)
 
 
-This project hosts the code for our NIPS 2015 paper.
+This project hosts the code for our **NIPS 2015** paper.
 
 + Cesc Chunseong Park and Gunhee Kim. Expressing an Image Stream with a Sequence of Natural Sentences. In NIPS 2015
 [[pdf](http://www.cs.cmu.edu/~gunhee/publish/nips15_stream2text.pdf)]
