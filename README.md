@@ -36,9 +36,9 @@ git clone https://github.com/cesc-park/CRCN.git crcn
 
 ##Pre-requisite
 
-1. stanford NLP
+1. Install Stanford NLP
 
-	Download stanford-parser.jar, stanford-parser-3.5.2-models.jar and englishPCFG.caseless.ser.gz
+	Download `stanford-parser.jar`, `stanford-parser-3.5.2-models.jar` and `englishPCFG.caseless.ser.gz`.
 	```
 	wget http://nlp.stanford.edu/software/stanford-parser-full-2015-04-20.zip
 	wget http://nlp.stanford.edu/software/stanford-corenlp-full-2015-04-20.zip
@@ -49,9 +49,9 @@ git clone https://github.com/cesc-park/CRCN.git crcn
 	cd stanford-parser
 	jar xvf stanford-parser-3.5.2-models.jar
 	```
-2. Brown courpus
+2. Install Brown courpus
 
-	We need "browncourpus" package to extract entity feature.
+	We need the `browncourpus` package to extract entity features.
 	```
 	wget https://bitbucket.org/melsner/browncoherence/get/d46d5cd3fc57.zip -O browncoherence.zip
 	unzip browncoherence.zip
@@ -65,7 +65,7 @@ git clone https://github.com/cesc-park/CRCN.git crcn
 	```
 	vim Makefile
 	```
-	Change from up to bottom.
+	Change the followings from top to bottom.
 	
 	```
 	WORDNET = 1
@@ -87,7 +87,7 @@ git clone https://github.com/cesc-park/CRCN.git crcn
 	make TestGrid
 	cd ..
 	```
-3.  python modules
+3.  Install python modules
 
 	Install all dependencies.
 	```
@@ -97,15 +97,15 @@ git clone https://github.com/cesc-park/CRCN.git crcn
 
 ##Make New Dataset
 
-1. Prepare Dataset
+1. Prepare dataset
 
 	Check out data format.
 	```
 	less json_data_format.txt
 	```
 
-2. Get Parsed Tree
-	We use StanfordCoreNLP tools implemented with java to extract parsedtree. 
+2. Create parsed trees
+	We use the `StanfordCoreNLP` tool written in java to extract parsed trees. 
 	```
 	cd tree
 	python spliter_for_parser.py
@@ -124,50 +124,51 @@ mkdir model
 ```
 
 
-1. Doc2Vec
-	First, we have to training doc2vec model.
+1. Doc2Vec.
+	Train the doc2vec model.
 
 	```
 	python doc2vec_training.py
 	```
 
-2. RCN
-	Trainig RCN model.
-	If you want to use GPU (In this example device is 0), excute below code.
+2. RCN.
+	Train the RCN model.
+	If you want to use GPU (in this example device is 0), execute the below code.
 
 	```
 	CUDA_VISIBLE_DEVICES=0 THEANO_FLAGS=mode=FAST_RUN,device=gpu,floatX=float32 python rcn_training.py
 	```
-	If you want to use CPU, excute below code instead of above code.
+	If you want to use CPU, run the below instead of the above.
 
 	```
 	python rcn_training.py
 	```
 
-3. CRCN
-	Trainig RCN model.
-	If you want to use GPU (In this example device is 0), excute below code.
+3. CRCN.
+	Train the CRCN model.
+	If you want to use GPU (In this example device is 0), execute the below code.
 	```
 	CUDA_VISIBLE_DEVICES=0 THEANO_FLAGS=mode=FAST_RUN,device=gpu,floatX=float32 python crcn_training.py
 	```
-	If you want to use CPU, excute below code instead of above code.
+	If you want to use CPU, run the below instead of the above.
 
 	```
 	python crcn_training.py
 	```
 
 
-##Generate Output
+##Output Generation
 
-Generating output is easy. The program will load training and test datasets, then automatically generate outputs.
+Generating output is easy. The following script loads training and test datasets, then automatically produces outputs.
 
 ```
 python generate_output.py
 ```
 
-##Acknowledge
+##Acknowledgement
 
-We use keras package (We changed it to make our model). Thanks for keras developers.
+We implement our model using [keras](http://keras.io/) package. 
+Thanks for keras developers. :)
 
 
 ## Authors
