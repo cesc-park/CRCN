@@ -51,8 +51,9 @@ git clone https://github.com/cesc-park/CRCN.git crcn
 	```
 2. Install Brown courpus
 
-	We need the `browncourpus` package to extract entity features.
+	We need the `browncourpus` and `wordnet` packages to extract entity features.
 	```
+	sudo apt-get install wordnet-dev
 	wget https://bitbucket.org/melsner/browncoherence/get/d46d5cd3fc57.zip -O browncoherence.zip
 	unzip browncoherence.zip
 	mv melsner-browncoherence-d46d5cd3fc57 browncoherence
