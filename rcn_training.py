@@ -19,7 +19,7 @@ MAX_SEQ_LEN= 10
 
 
 # the GRU below returns sequences of max_caption_len vectors of size 256 (our word embedding size)
-model = locals()['creat_rcn_blstm_reg'](is_entity=False)
+model = creat_rcn()
 model.compile(loss='rcn_cost_func', optimizer='rmsprop')
 
 # "images" is a numpy array of shape (nb_samples, nb_channels=3, width, height)

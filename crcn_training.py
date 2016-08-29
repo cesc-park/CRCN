@@ -20,7 +20,7 @@ from load_models import *
 
 MAX_SEQ_LEN= 10
 
-model = locals()['creat_crcn_blstm_reg'](is_entity=True)
+model = create_crcn()
 model.compile(loss='crcn_cost_func', optimizer='rmsprop')
 # "images" is a numpy array of shape (nb_samples, nb_channels=3, width, height)
 # "captions" is a numpy array of shape (nb_samples, max_caption_len=16, embedding_dim=256)
