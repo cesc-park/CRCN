@@ -13,20 +13,13 @@ from gensim import models
 import json
 import os
 import scipy.io
+from load_models import *
 
 MAX_SEQ_LEN= 10
 
-model = Sequential()
 
 # the GRU below returns sequences of max_caption_len vectors of size 256 (our word embedding size)
-model.add(RCN(300, 300, return_sequences=True,activation='relu',init='he_normal'))
-model.add(Activation('relu'))
-model.add(Dropout(0.5))
-model.add(Embedding(300, 512,init='he_normal'))
-model.add(Dropout(0.5))
-model.add(Embedding(512, 4096,init='he_normal'))
-model.add(Dropout(0.7))
-
+model = creat_rcn()
 model.compile(loss='rcn_cost_func', optimizer='rmsprop')
 
 # "images" is a numpy array of shape (nb_samples, nb_channels=3, width, height)
