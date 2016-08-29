@@ -10,21 +10,6 @@ from keras.optimizers import SGD
 from keras.layers.recurrent import *
 
 
-def create_crcn_original(is_entity=False):
-    model = Sequential()
-    model.add(BRNN(
-        300, 300, return_sequences=True,
-        activation='relu',init='he_normal',
-        is_entity=is_entity))
-    model.add(Activation('relu'))
-    model.add(Dropout(0.5))
-    model.add(Embedding(300, 512,init='he_normal'))
-    model.add(Dropout(0.5))
-    model.add(Embedding(512, 4096,init='he_normal'))
-    model.add(Dropout(0.7))
-    return model
-
-
 def create_crcn():
     model = Sequential()
     model.add(BLSTM(
