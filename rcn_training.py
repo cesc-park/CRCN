@@ -2,11 +2,6 @@ import sys
 sys.path.append("./keras")
 import theano
 from theano import tensor
-from keras.models import Sequential
-from keras.layers.embeddings import Embedding
-from keras.layers.core import Dense, Dropout, Activation, Flatten
-from keras.optimizers import SGD
-from keras.layers.recurrent import RCN
 import numpy as np
 import pickle
 from gensim import models
