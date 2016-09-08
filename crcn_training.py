@@ -2,13 +2,7 @@ import sys
 sys.path.append("./keras")
 sys.path.append("./entity")
 import theano
-from theano import tensor
-from keras.models import Sequential
-from keras.layers.embeddings import Embedding
-from keras.layers.core import Dense, Dropout, Activation, Flatten
-from keras.layers.convolutional import Convolution2D, MaxPooling2D
-from keras.optimizers import SGD
-from keras.layers.recurrent import CRCN,RCN,SimpleDeepRNN
+from keras.layers.recurrent import CRCN,RCN
 import numpy as np
 import pickle
 from gensim import models
