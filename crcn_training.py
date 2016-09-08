@@ -2,7 +2,6 @@ import sys
 sys.path.append("./keras")
 sys.path.append("./entity")
 import theano
-from keras.layers.recurrent import CRCN,RCN
 import numpy as np
 import pickle
 from gensim import models
