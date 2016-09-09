@@ -15,5 +15,9 @@ def l2(l=.01):
         return g
     return l2wrap
 
+def my_l2(g, p, l=0.01):
+    g += p * l
+    return g
+
 def identity(g, p):
     return g

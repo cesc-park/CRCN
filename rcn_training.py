@@ -2,11 +2,6 @@ import sys
 sys.path.append("./keras")
 import theano
 from theano import tensor
-from keras.models import Sequential
-from keras.layers.embeddings import Embedding
-from keras.layers.core import Dense, Dropout, Activation, Flatten
-from keras.optimizers import SGD
-from keras.layers.recurrent import RCN
 import numpy as np
 import pickle
 from gensim import models
@@ -19,7 +14,7 @@ MAX_SEQ_LEN= 10
 
 
 # the GRU below returns sequences of max_caption_len vectors of size 256 (our word embedding size)
-model = creat_rcn()
+model = create_rcn_blstm()
 model.compile(loss='rcn_cost_func', optimizer='rmsprop')
 
 # "images" is a numpy array of shape (nb_samples, nb_channels=3, width, height)

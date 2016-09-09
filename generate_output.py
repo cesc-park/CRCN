@@ -1,36 +1,13 @@
-import json
 import sys
-from topk_utils import *
-import numpy as np
-import re
+import os
+sys.path.append('./keras')
+sys.path.append("./entity")
+import json
+import scipy.io
+
 from gensim import models
-from keras.models import Sequential
-from keras.layers.recurrent import CRCN,RCN
-from keras.layers.embeddings import Embedding
-from keras.layers.core import Dense, Dropout, Activation, Flatten
-
-
-
-def create_rcn_model():
-    model=Sequential()
-    model.add(RCN(300, 300, return_sequences=True,activation='relu'))
-    model.add(Activation('relu'))
-    model.add(Dropout(0.5))
-    model.add(Embedding(300, 512,init='normal'))
-    model.add(Dropout(0.5))
-    model.add(Embedding(300, 4096,init='normal'))
-    model.add(Dropout(0.7))
-    return model
-def create_crcn_model():
-    model=Sequential()
-    model.add(CRCN(300, 300, return_sequences=True,activation='relu'))
-    model.add(Activation('relu'))
-    model.add(Dropout(0.5))
-    model.add(Embedding(300, 512,init='normal'))
-    model.add(Dropout(0.5))
-    model.add(Embedding(300, 4096,init='normal'))
-    model.add(Dropout(0.7))
-    return model
+from load_models import *
+from topk_utils import *
 
 jsonfile = open('./data/example_tree.json', 'r')
 json_data=jsonfile.read()
@@ -84,12 +61,12 @@ testset=contents_filtered.items()
 
 count=0
 
-model_loaded_entity = create_crcn_model()
+model_loaded_entity = create_crcn_blstm()
 model_loaded_entity.load_weights(CRCN_MODEL_PATH)
 model_loaded_entity.compile(loss='crcn_score_func',optimizer='rmsprop')
 
 
-model_loaded = create_rcn_model()
+model_loaded = create_rcn_blstm()
 model_loaded.load_weights(RCN_MODEL_PATH)
 model_loaded.compile(loss='rcn_score_func',optimizer='rmsprop')
 

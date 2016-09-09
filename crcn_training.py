@@ -2,13 +2,6 @@ import sys
 sys.path.append("./keras")
 sys.path.append("./entity")
 import theano
-from theano import tensor
-from keras.models import Sequential
-from keras.layers.embeddings import Embedding
-from keras.layers.core import Dense, Dropout, Activation, Flatten
-from keras.layers.convolutional import Convolution2D, MaxPooling2D
-from keras.optimizers import SGD
-from keras.layers.recurrent import CRCN,RCN,SimpleDeepRNN
 import numpy as np
 import pickle
 from gensim import models
@@ -20,7 +13,7 @@ from load_models import *
 
 MAX_SEQ_LEN= 10
 
-model = create_crcn()
+model = create_crcn_blstm()
 model.compile(loss='crcn_cost_func', optimizer='rmsprop')
 # "images" is a numpy array of shape (nb_samples, nb_channels=3, width, height)
 # "captions" is a numpy array of shape (nb_samples, max_caption_len=16, embedding_dim=256)
