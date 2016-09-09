@@ -1,9 +1,13 @@
 import sys
+import os
 sys.path.append('./keras')
 sys.path.append("./entity")
 import json
+import scipy.io
+
 from gensim import models
 from load_models import *
+from topk_utils import *
 
 jsonfile = open('./data/example_tree.json', 'r')
 json_data=jsonfile.read()
@@ -57,12 +61,12 @@ testset=contents_filtered.items()
 
 count=0
 
-model_loaded_entity = create_crcn()
+model_loaded_entity = create_crcn_blstm()
 model_loaded_entity.load_weights(CRCN_MODEL_PATH)
 model_loaded_entity.compile(loss='crcn_score_func',optimizer='rmsprop')
 
 
-model_loaded = create_rcn()
+model_loaded = create_rcn_blstm()
 model_loaded.load_weights(RCN_MODEL_PATH)
 model_loaded.compile(loss='rcn_score_func',optimizer='rmsprop')
 
