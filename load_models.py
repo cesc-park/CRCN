@@ -9,8 +9,33 @@ from keras.layers.normalization import BatchNormalization
 from keras.optimizers import SGD
 from keras.layers.recurrent import *
 
-
 def create_crcn():
+    model = Sequential()
+    model.add(BRNN(
+        300, 300, return_sequences=True,init='he_normal',
+        is_entity=True, regularize=False))
+    model.add(Activation('relu'))
+    model.add(Dropout(0.5))
+    model.add(Embedding(300, 512,init='he_normal'))
+    model.add(Dropout(0.5))
+    model.add(Embedding(512, 4096,init='he_normal'))
+    model.add(Dropout(0.7))
+    return model
+
+def create_rcn():
+    model = Sequential()
+    model.add(BRNN(
+        300, 300, return_sequences=True,init='he_normal',
+        is_entity=False, regularize=False))
+    model.add(Activation('relu'))
+    model.add(Dropout(0.5))
+    model.add(Embedding(300, 512,init='he_normal'))
+    model.add(Dropout(0.5))
+    model.add(Embedding(512, 4096,init='he_normal'))
+    model.add(Dropout(0.7))
+    return model
+
+def create_crcn_blstm():
     model = Sequential()
     model.add(BLSTM(
         300, 300, return_sequences=True,init='he_normal',
@@ -23,7 +48,7 @@ def create_crcn():
     model.add(Dropout(0.7))
     return model
 
-def create_rcn():
+def create_rcn_blstm():
     model = Sequential()
     model.add(BLSTM(
         300, 300, return_sequences=True,init='he_normal',
