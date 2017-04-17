@@ -16,7 +16,7 @@ It integrates (i) convolutional networks for image description, (ii) bidirection
 The main objective of our model is, given a photo stream, to generate (retrieve) a coherent sequence of natural sentences. For example, if you visit New York City and takes lots of pictures, it can write a travelogue for your photo album. While almost all previous studies have dealt with the relation between a single image and a single natural sentence, our work extends both input and output dimension to a sequence of images and a sequence of sentences. 
 
 
-##Reference
+## Reference
 
 If you use this code as part of any published research, please acknowledge the following paper.
 
@@ -30,11 +30,11 @@ year      = 2015
 ```
 
 
-#Running Code
+# Running Code
 
 git clone https://github.com/cesc-park/CRCN.git crcn
 
-##Prerequisites
+## Prerequisites
 
 1. Install Stanford NLP
 
@@ -95,7 +95,7 @@ git clone https://github.com/cesc-park/CRCN.git crcn
 	```
 
 
-##Applying to New Dataset
+## Applying to New Dataset
 
 1. Prepare dataset.
 	Check out the data format.
@@ -114,7 +114,7 @@ git clone https://github.com/cesc-park/CRCN.git crcn
 	```
 
 
-##Training
+## Training
 
 Make directory for training
 
@@ -156,7 +156,7 @@ mkdir model
 	```
 
 
-##Output Generation
+## Output Generation
 
 Generating output is easy. The following script loads training and test datasets, then automatically produces outputs.
 
@@ -164,7 +164,7 @@ Generating output is easy. The following script loads training and test datasets
 python generate_output.py
 ```
 
-##Acknowledgement
+## Acknowledgement
 
 We implement our model using [keras](http://keras.io/) package. 
 Thanks for keras developers. :)
